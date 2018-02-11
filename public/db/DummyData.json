@@ -1,0 +1,79 @@
+{
+  "colleges": [{
+      "uni-name": "University of Waterloo",
+      "Programs": [{
+        "name": "Software Engineering (COOP)",
+        "prerequisites": {
+          "Caclculus I & II": 85,
+          "Linear Algebra": 84,
+          "Mechanics": 84,
+          "Electricity & Magnetism": 84,
+          "General Chemistry I": 84
+        }
+      }],
+      "Location": {
+        "City": "Waterloo",
+        "Province": "Ontario",
+        "Country": "Canada"
+      },
+      "Selectivity": "Very High"
+    },
+    {
+      "uni-name": "Concordia University",
+      "Programs": [{
+        "name": "Software Engineering (COOP)",
+        "prerequisites": {
+          "Caclculus I & II": 87,
+          "Linear Algebra": 87,
+          "Mechanics": 87,
+          "Electricity & Magnetism": 87,
+          "General Chemistry I": 87
+        }
+      }],
+      "Location": {
+        "City": "Montreal",
+        "Province": "Quebec",
+        "Country": "Canada"
+      },
+      "Selectivity": "High"
+    },
+
+    {
+      "uni-name": "University of McGill",
+      "Programs": [{
+        "name": "Computer Science",
+        "prerequisites": {
+          "Calculus I & II": 89,
+          "Linear Algebra": 89,
+          "Mechanics": 89,
+          "Electricity & Magnetism": 89,
+          "General Chemistry I": 89
+        }
+      }],
+      "Location": {
+        "City": "Montreal",
+        "Province": "Quebec",
+        "Country": "Canada"
+      },
+      "Selectivity": "High"
+    }, {
+      "uni-name": "University of British Columbia",
+      "Programs": [{
+        "name": "Computer Science",
+        "prerequisites": {
+          "Caclculus I & II": 81,
+          "Linear Algebra": 81,
+          "Mechanics": 81,
+          "Electricity & Magnetism": 81,
+          "General Chemistry I": 81
+        }
+      }],
+      "Location": {
+        "City": "Vancouver",
+        "Province": "British Columbia",
+        "Country": "Canada"
+      },
+      "Selectivity": "High"
+    }
+  ]
+}

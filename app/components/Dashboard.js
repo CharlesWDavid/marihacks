@@ -4,10 +4,7 @@ import Messages from './Messages';
 
 class Dashboard extends React.Component {
   render(){
-    return(
-      <div> LMAO </div>
-    );
   }
-}
+};
 
 export default Dashboard;

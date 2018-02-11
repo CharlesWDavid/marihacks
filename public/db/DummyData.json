@@ -1,0 +1,68 @@
+{
+  "uni-name":"University of Waterloo",
+    "Progams":[{"name": "Software Engineering (COOP)",
+                  "prerequisites":{
+                    "Advanced Functions": 70,
+                    "Calculus and Vectors": 70,
+                    "Chemistry": 70,
+                    "Physics": 70,
+                    "English": 70,
+                  }
+                }],
+    "Location":[{"City":"Montreal",
+                  "Province":"Quebec",
+                  "Country":"Canada"
+                  }],
+    "Selectivity":"Very High"
+}
+
+{
+  "uni-name":"Concordia University",
+    "Programs":[{"name":"Software Engineering (COOP)",
+                "prerequisites":{
+                  "Caclculus I & II":87,
+                  "Linear Algebra":87,
+                  "Mechanics":87,
+                  "Electricity & Magnetism":87,
+                  "General Chemistry I":87
+                }
+                }],
+    "Location":[{"City":"Montreal",
+                  "Province":"Quebec",
+                  "Country":"Canada"
+                  }],
+    "Selectivity":"High"
+}
+
+{
+  "uni-name":"University of McGill",
+    "Programs":[{"name":"Computer Science",
+                "prerequisites":{
+                  "Calculus I & II":87,
+                  "Linear Algebra":87,
+                  "Mechanics":87,
+                  "Electricity & Magnetism":87,
+                  "General Chemistry I":87
+                  }
+                }],
+    "Location":[{"City":"Montreal",
+                  "Province":"Quebec",
+                  "Country":"Canada"
+                  }],
+    "Selectivity":"High"
+}
+{
+  "uni-name":"University of British Columbia",
+    "Programs":[{"name":"Computer Science",
+                "prerequisites":{
+                  "English Language Arts 30-1":70,
+                  "Math 30 or 31":67,
+                  "One of Biology 30, Chemistry 30, or Physics 30":70,
+                  }
+                }],
+    "Location":[{"City":"Vancouver",
+                  "Province":"British Columbia",
+                  "Country":"Canada"
+                  }],
+    "Selectivity":"High"
+}

@@ -12,11 +12,9 @@ pids
 logs
 results
 tmp
+coverage
 
-#Build
-public/css/main.css
-
-# API keys and secrets
+# API keys
 .env
 
 # Dependency directory

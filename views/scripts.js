@@ -4,12 +4,21 @@ function next() {
 }
 
 function brew_results() {
-  var checkedValue = null; 
-  var inputElements = document.getElementsByClassName('activity');
-  for(var i=0; inputElements[i]; ++i){
-    if(inputElements[i].checked){
-      checkedValue = inputElements[i].value;
-      break;
-      }
-}
+  var e = document.getElementById("travel");
+  var UserInputTravel = e.options[e.selectedIndex].value; 
+  
+  var f = document.getElementById("finance");
+  var UserInputTravel = f.options[e.selectedIndex].value; 
+  
+  var ideal_college = ""
+  
+  if (UserInputTravel = "yes") {
+    ideal_college = "University of British Columbia";
+  if (UserInputTravel = "notsure")
+    ideal_college = "University of McGill";
+  if (UserInputTravel = "no")
+    ideal_college = "University of McGill";
+  }
+  window.open("results.html","_self");
+  document.getElementById("recommended").innerHTML = ideal_college;
 }

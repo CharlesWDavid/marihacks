@@ -7,12 +7,23 @@ class Home extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      filter:{
-        location:"",
-        program:""
-      },
+      location:"none",
+      program:"none",
       colleges:[]
     };
+
+    this.filter = this.filter.bind(this);
+    this.globalChangeHandler = this.globalChangeHandler.bind(this);
+  }
+  globalChangeHandler(event){
+    this.setState({[event.target.id]:event.target.value});
+  }
+  filter(){
+    var link = "http://localhost:3000";
+    console.log(link);
+    $.ajax(link + "/filter/?location=" + this.state.location + "&program=" + this.state.program).then(
+      college => {this.setState({colleges:college}); console.log(college)}, this
+    );
   }
   render() {
     return (
@@ -26,7 +37,8 @@ class Home extends React.Component {
               <div className="filter-label">
                 Location
               </div>
-              <select className="filter-picker" name="location">
+              <select className="filter-picker" id="location" onChange={this.globalChangeHandler}>
+                <option value="none"></option>
                 <option value="Montreal">Montreal</option>
                 <option value="Waterloo">Waterloo</option>
                 <option value="Vancouver">Vancouver</option>
@@ -39,7 +51,8 @@ class Home extends React.Component {
               <div className="filter-label">
                 Programs
               </div>
-              <select className="filter-picker" name="programs">
+              <select className="filter-picker" id="program" onChange={this.globalChangeHandler}>
+                <option value="none"></option>
                 <option value="Computer Science">Computer Science</option>
                 <option value="Software Engineering (COOP)">Software Engineering</option>
               </select>
@@ -69,7 +82,7 @@ class Home extends React.Component {
               <select className="filter-picker">
               </select>
             </div>
-            <button className="filter-btn btn" onClick="filter">Filter</button>
+            <button className="filter-btn btn" onClick={this.filter}>Filter</button>
           </div>
           {/*<div className="v-separator"><div></div></div>*/}
           <div className="college-list">
@@ -86,7 +99,7 @@ class Home extends React.Component {
                 <div className="eligibility">eligibility</div>
                 <div className="chosen"><select></select></div>
               </div>
-              {this.state.colleges.map(college => {<CollegeListing college={college}/>})}
+              {this.state.colleges.map(college => <CollegeListing college={college}/>)}
             </div>
           </div>
         </div>

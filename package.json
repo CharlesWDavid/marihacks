@@ -1,0 +1,32 @@
+{
+  "name": "react-blank-template",
+  "version": "1.0.0",
+  "description": "Blank temple to clone and test things",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirSoDerp/react-blank-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirSoDerp/react-blank-template/issues"
+  },
+  "homepage": "https://github.com/SirSoDerp/react-blank-template#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

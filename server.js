@@ -54,7 +54,7 @@ if (app.get('env') === 'development') {
 
 //React server posting
 
-app.get('/', function(req, res){
+app.get('/dummydata', function(req, res){
   res.send(dummydata)
 });
 
@@ -65,10 +65,10 @@ app.get('/filter', function(req, res){
   console.log(req.query)
   if (req.query != null){
     var filter = req.query;
-    if (filter.location != null){
+    if (filter.location != null||filter.location != "none"||filter.location != undefined){
       json = dummydata.colleges.filter(college => college.Location.City == filter.location);
     };
-    if (filter.program != null){
+    if (filter.program != null||filter.program != "none"||filter.program != undefined){
       if (json != []){
         var newProgram = filter.program.replace("%20", " ");
         json = json.filter(college => {return college.Programs.some(

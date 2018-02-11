@@ -27,9 +27,9 @@ class CollegeListing extends React.Component{
   render(){
     return(
       <div className="list-items">
-        <div className="name">{this.props.college.name}</div>
+        <div className="name">{this.props.college["uni-name"]}</div>
         <div className="eligibility">{this.checkEligibility}</div>
-        <div className="chosen">{this.props.college.location}</div>
+        <div className="chosen">{this.props.college.Location.City}</div>
       </div>
     );
   }

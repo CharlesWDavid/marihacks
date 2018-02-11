@@ -5,7 +5,7 @@ import Messages from './Messages';
 class DaWay extends React.Component {
   render(){
     return(
-      <body background='pic4.jpg' id="bg">
+      <body background='../views/pic4.jpg' id="bg">
         <div class="grid">
           <div id="box">
             <h1 class="title">My Path</h1>

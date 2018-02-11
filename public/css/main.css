@@ -282,6 +282,104 @@ textarea {
   text-transform: uppercase;
 }
 
+body{
+  font-family: "Lato", sans-serif;
+}
+
+/* college dashboard styles */
+
+#college-dashboard{
+  width:100%;
+  background-color:#fff;
+  min-height:70vh;
+}
+
+@media screen and (min-width:1200px){
+  #college-dashboard{
+    width:70%;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+  }
+  #college-dashboard .filter{
+    width:30%;
+    padding:2rem;
+    text-align:right;
+    height:100%;
+  }
+  #college-dashboard .college-list{
+    width:70%;
+    border-left:solid #000 1px;
+  }
+  #college-dashboard .filter-title{
+    text-align:center;
+    font-size:2rem;
+  }
+  #college-dashboard .filter-options{
+    display:flex;
+    flex-direction:column;
+  }
+  #college-dashboard .filter-label{
+    text-align:left;
+    padding:0.5rem 0rem;
+    font-size:1.5rem;
+  }
+  #college-dashboard .filter-picker{
+    width:100%;
+  }
+  #college-dashboard .filter-btn{
+    margin-top:2rem;
+  }
+  #college-dashboard .sorting{
+    display:flex;
+    flex-direction:row;
+    margin:auto;
+    justify-content: center;
+  }
+  #college-dashboard .sorting .btn-link{
+    margin:1rem 2rem;
+    font-size:2rem;
+    color:#000;
+  }
+  #college-dashboard .sorting .btn-link{
+    color:#000;
+    text-decoration: none;
+  }
+  #college-dashboard .h-separator{
+    width:100%;
+    height:1px;
+    background-color:#000;
+  }
+  #college-dashboard .lists>div{
+    width:100%;
+    height:5rem;
+    display:flex;
+    flex-direction:row;
+    padding:0.5rem 0;
+  }
+  #college-dashboard .name{
+    width:40%;
+  }
+  #college-dashboard .eligibility{
+    width:15%;
+  }
+  #college-dashboard .chosen{
+    width:45%;
+  }
+  #college-dashboard .chosen select{
+    width:40%;
+  }
+  #college-dashboard .name,
+  #college-dashboard .eligibility,
+  #college-dashboard .chosen{
+    text-align:center;
+  }
+  #college-dashboard .list-items{
+    font-size:2rem;
+    font-weight:bold;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 770px 1fr 1fr;
@@ -325,4 +423,5 @@ button {
   font-size: 24px;
   padding: 1% 5%;
 }
+
 

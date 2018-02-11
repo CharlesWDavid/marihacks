@@ -1,44 +1,92 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import Messages from './Messages';
+import CollegeListing from './CollegeListing.js';
 
 class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      filter:{
+        location:"",
+        program:""
+      },
+      colleges:[]
+    };
+  }
   render() {
     return (
       <div className="container-fluid">
-        <Messages messages={this.props.messages}/>
-        <div className="row">
-          <div className="col-sm-4">
-            <div className="panel">
-              <div className="panel-body">
-                <h3>Heading</h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                  mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
-                  mollis euismod. Donec sed odio dui.</p>
-                <a href="/" role="button" className="btn btn-default">View details</a>
-              </div>
+        <div id="college-dashboard">
+          <div className="filter">
+            <div className="filter-title">
+              Filters
             </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="panel">
-              <div className="panel-body">
-                <h3>Heading</h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                  mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
-                  mollis euismod. Donec sed odio dui.</p>
-                <a href="#" role="button" className="btn btn-default">View details</a>
+            <div className="filter-options">
+              <div className="filter-label">
+                Location
               </div>
+              <select className="filter-picker" name="location">
+                <option value="Montreal">Montreal</option>
+                <option value="Waterloo">Waterloo</option>
+                <option value="Vancouver">Vancouver</option>
+              </select>
+              <div className="filter-label">
+                Eligibility
+              </div>
+              <select className="filter-picker">
+              </select>
+              <div className="filter-label">
+                Programs
+              </div>
+              <select className="filter-picker" name="programs">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Software Engineering (COOP)">Software Engineering</option>
+              </select>
+              <div className="filter-label">
+                Tuition
+              </div>
+              <select className="filter-picker">
+              </select>
+              <div className="filter-label">
+                Campus Size
+              </div>
+              <select className="filter-picker">
+              </select>
+              <div className="filter-label">
+                Student Teacher Ratio
+              </div>
+              <select className="filter-picker">
+              </select>
+              <div className="filter-label">
+                Sports and Activities
+              </div>
+              <select className="filter-picker">
+              </select>
+              <div className="filter-label">
+                Housing
+              </div>
+              <select className="filter-picker">
+              </select>
             </div>
+            <button className="filter-btn btn" onClick="filter">Filter</button>
           </div>
-          <div className="col-sm-4">
-            <div className="panel">
-              <div className="panel-body">
-                <h3>Heading</h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                  mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
-                  mollis euismod. Donec sed odio dui.</p>
-                <a href="#" role="button" className="btn btn-default">View details</a>
+          {/*<div className="v-separator"><div></div></div>*/}
+          <div className="college-list">
+            <div className="sorting">
+              <button className="btn-link">Top Colleges</button>
+              <button className="btn-link">Selectivity</button>
+              <button className="btn-link">Alphabetical</button>
+              <button className="btn-link">Your Colleges</button>
+            </div>
+            <div className="h-separator"></div>
+            <div className="lists">
+              <div className="listing-label">
+                <div className="name">name</div>
+                <div className="eligibility">eligibility</div>
+                <div className="chosen"><select></select></div>
               </div>
+              {this.state.colleges.map(college => {<CollegeListing college={college}/>})}
             </div>
           </div>
         </div>

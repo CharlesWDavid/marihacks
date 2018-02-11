@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 770px 1fr 1fr;
+  grid-template-rows:  1fr 3fr 2fr 2fr;
+  text-align: center
+}
+.title {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+}
+
+.info {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+

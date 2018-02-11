@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Dashboard College</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="/stylesheet.css">
+</head>
+
+<body id="bg">
+  <div class="grid">
+    <div class="info">
+      <h4>What are the activities you enjoy doing? (Check all that applies)</h4>
+        <input type="checkbox" class="activity" name="activities" value="Sports"> Sports 
+        <input type="checkbox" class="activity" name="activities" value="Art" checked="checked"> Arts 
+        <input type="checkbox" class="activity" name="activities" value="Congress" checked="checked"> Student Government <br>
+        <input type="checkbox" class="activity" name="activities" value="Debate"> Debate 
+        <input type="checkbox" class="activity" name="activities" value="Mun" checked="checked"> Model UN 
+        <input type="checkbox" class="activity" name="activities" value="Programming" checked="checked"> Programming
+      <h4>How do you feel towards the idea of travelling and living new experiences?</h4>
+        <select name="travel" size="3" multiple>
+          <option value="yes">Love going outside of my comfort zone</option>
+          <option value="not sure">Not sure, some times</option>
+          <option value="no">I'd rather stay near home</option>
+        </select>
+      <h4>What is your financial situation/income? (or of the person paying for you)</h4>
+        <select name="finance" size="5" multiple>
+          <option value="notaproblem">Money is not a problem to me</option>
+          <option value="200k+">$200,000+ per year</option>
+          <option value="100+">$100,000+ per year</option>
+          <option value="50k+">$50,000+ per year</option>
+          <option value="0">less than $50,000+ per year</option>
+        </select><br>
+      <input type="submit" onclick="brew_results()">
+    </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

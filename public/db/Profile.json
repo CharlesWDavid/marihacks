@@ -1,0 +1,16 @@
+{
+  "name": "Jason",
+  "email": "json.file@gmail.com",
+  "password": "js>python",
+    "Location":{"City":"Montreal",
+                  "Province":"Quebec",
+                  "Country":"Canada"
+                },
+  "courses": {
+   "Caclculus I & II":99,
+   "Linear Algebra":96,
+   "Mechanics":93,
+   "Electricity & Magnetism":92,
+   "General Chemistry I":94
+  }
+}

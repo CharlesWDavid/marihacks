@@ -29,6 +29,9 @@ var configureStore = require('./app/store/configureStore').default;
 
 var app = express();
 
+const dummydata = require('./public/db/DummyData.json');
+var profile = require('./public/db/Profile.json');
+
 var compiler = webpack(config);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -49,7 +52,42 @@ if (app.get('env') === 'development') {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
-app.post('/contact', contactController.contactPost);
+//React server posting
+
+app.get('/', function(req, res){
+  res.send(dummydata)
+});
+
+//location, programs,
+
+app.get('/filter', function(req, res){
+  var json = [];
+  console.log(req.query)
+  if (req.query != null){
+    var filter = req.query;
+    if (filter.location != null){
+      json = dummydata.colleges.filter(college => college.Location.City == filter.location);
+    };
+    if (filter.program != null){
+      if (json != []){
+        var newProgram = filter.program.replace("%20", " ");
+        json = json.filter(college => {return college.Programs.some(
+          program => {return program.name == newProgram}
+          )});
+      } else {
+      var newProgram = filter.program.replace("%20", " ");
+      console.log(newProgram);
+      json = dummydata.colleges.filter(college => {return college.Programs.some(
+          program => {return program.name == newProgram}
+        )});
+      }
+    }
+  }
+  res.send(json)
+})
+
+
+// app.post('/contact', contactController.contactPost);
 
 // React server rendering
 app.use(function(req, res) {
